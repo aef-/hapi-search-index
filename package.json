@@ -1,0 +1,22 @@
+{
+  "name": "hapi-search-index",
+  "version": "0.0.1",
+  "description": "Wraps search-index in a Hapi Plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aef-/hapi-search-index.git"
+  },
+  "author": "aef-",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aef-/hapi-search-index/issues"
+  },
+  "homepage": "https://github.com/aef-/hapi-search-index#readme",
+  "dependencies": {
+    "search-index": "^0.8.8"
+  }
+}
