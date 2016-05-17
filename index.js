@@ -1,15 +1,19 @@
 ﻿'use strict';
 
 exports.register = function(server, options, next) {
-  const searchindex = require('search-index');
+  const searchIndex = require('search-index');
   searchIndex(options, function(err, si) {
     if(err)
-      throw new Error(err);
-    server.expose('search', si);
-    next();
+      next(err);
+    else {
+      server.expose(si);
+      next();
+    }
   });
 };
 
+const pkg = require('./package.json');
 exports.register.attributes = {
-  pkg: require('./package.json')
+  name: 'searchIndex',
+  version: pkg.version
 };
